@@ -8,7 +8,7 @@ resource "aws_instance" "one" {
 ami = "ami-01a4f99c4ac11b03c"
 instance_type = "t2.medium"
   key_name        = "terraproject"
-  vpc_security_group_ids = [aws_security_group.three.id]
+  vpc_security_group_ids = [aws_security_group.king.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
 #!/bin/bash
@@ -27,7 +27,7 @@ resource "aws_instance" "two" {
 ami = "ami-01a4f99c4ac11b03c"
 instance_type = "t2.medium"
   key_name        = "terraproject"
-  vpc_security_group_ids = [aws_security_group.three.id]
+  vpc_security_group_ids = [aws_security_group.king.id]
   availability_zone = "ap-south-1b"
   user_data       = <<EOF
 #!/bin/bash
